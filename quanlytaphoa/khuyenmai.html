@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Siêu Thị Mini - Khuyến Mãi Hot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            color: #000000;
+            animation: fadeInUp 0.5s ease both;
+        }
+
+        .navbar {
+            background-color: #2e7d32;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        .nav-link.active {
+            background-color: #1b5e20;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .nav-link:hover {
+            color: #a5d6a7 !important;
+        }
+
+        .product img {
+            border-radius: 10px;
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            background-color: #f0f0f0;
+            display: block;
+            margin: 0 auto 10px auto;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        .product .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+            color: #000000;
+        }
+
+        .product:hover .card {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            color: #2e7d32;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .btn-success {
+            background-color: #2e7d32;
+            border-color: #2e7d32;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background-color: #1b5e20;
+            border-color: #1b5e20;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="quanlytaphoa.html">🛒 Siêu Thị Mini</a>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="quanlytaphoa.html">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Sản phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="cart-link">Giỏ hàng (0)</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="history-link">Lịch sử</a></li>
+            </ul>
+            <div class="d-flex align-items-center" id="user-area">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3 class="section-title">Khuyến Mãi Hot</h3>
+        <div class="row" id="product-list">
+            <div class="col-6 col-md-3 mb-4 product">
+                <div class="card bg-white">
+                    <img src="khuyen-mai-mi.jpg" class="card-img-top" alt="Mì tôm giảm giá" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mì tôm (Giảm 20%)</h5>
+                        <p class="card-text text-success"><del>4.000đ</del> 3.200đ</p>
+                        <button class="btn btn-success btn-sm add-to-cart-btn">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 product">
+                <div class="card bg-white">
+                    <img src="sua-khuyen-mai.jpg" class="card-img-top" alt="Sữa tươi mua 1 tặng 1" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sữa tươi (Mua 1 tặng 1)</h5>
+                        <p class="card-text text-success">8.000đ</p>
+                        <button class="btn btn-success btn-sm add-to-cart-btn">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 product">
+                <div class="card bg-white">
+                    <img src="nuoc-ngot-giam-gia.jpg" class="card-img-top" alt="Nước ngọt giảm giá" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Nước ngọt (Giảm 15%)</h5>
+                        <p class="card-text text-success"><del>10.000đ</del> 8.500đ</p>
+                        <button class="btn btn-success btn-sm add-to-cart-btn">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 product">
+                <div class="card bg-white">
+                    <img src="banh-keo-khuyen-mai.jpg" class="card-img-top" alt="Bánh kẹo" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bánh quy (Đồng giá 10k)</h5>
+                        <p class="card-text text-success">10.000đ</p>
+                        <button class="btn btn-success btn-sm add-to-cart-btn">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Giỏ hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body" id="cartItems"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="checkout-btn">Thanh toán</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="historyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lịch sử mua hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body" id="historyItems"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" id="loginForm">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="usernameInput" class="form-label">Tên đăng nhập</label>
+                        <input type="text" class="form-control" id="usernameInput" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordInput" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="passwordInput" required />
+                    </div>
+                    <div id="loginError" class="text-danger"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Đăng nhập</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const DEMO_USER = { username: "user1", password: "123456" };
+
+        const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+        const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+        const historyModal = new bootstrap.Modal(document.getElementById('historyModal'));
+
+        let cart = [];
+        let history = [];
+
+        function loadCart() {
+            const data = localStorage.getItem('cart');
+            return data ? JSON.parse(data) : [];
+        }
+
+        function saveCart(currentCart) {
+            localStorage.setItem('cart', JSON.stringify(currentCart));
+        }
+
+        function loadHistory() {
+            const data = localStorage.getItem('history');
+            return data ? JSON.parse(data) : [];
+        }
+
+        function saveHistory(currentHistory) {
+            localStorage.setItem('history', JSON.stringify(currentHistory));
+        }
+
+        function isLoggedIn() {
+            return localStorage.getItem('loggedInUser') !== null;
+        }
+
+        function getLoggedInUser() {
+            return localStorage.getItem('loggedInUser');
+        }
+
+        function updateUserArea() {
+            const userArea = document.getElementById('user-area');
+            userArea.innerHTML = '';
+
+            if (isLoggedIn()) {
+                const username = getLoggedInUser();
+                const welcome = document.createElement('span');
+                welcome.className = 'me-2 text-white';
+                welcome.textContent = `Chào ${username}`;
+
+                const logoutBtn = document.createElement('button');
+                logoutBtn.className = 'btn btn-light btn-sm';
+                logoutBtn.textContent = 'Đăng xuất';
+                logoutBtn.addEventListener('click', () => {
+                    localStorage.removeItem('loggedInUser');
+                    saveCart([]); // Xóa giỏ hàng khi đăng xuất
+                    updateCartCount();
+                    updateUserArea();
+                    alert('Bạn đã đăng xuất.');
+                });
+
+                userArea.appendChild(welcome);
+                userArea.appendChild(logoutBtn);
+            } else {
+                const loginBtn = document.createElement('button');
+                loginBtn.className = 'btn btn-light btn-sm';
+                loginBtn.textContent = 'Đăng nhập';
+                loginBtn.addEventListener('click', () => {
+                    document.getElementById('loginError').textContent = '';
+                    document.getElementById('loginForm').reset();
+                    loginModal.show();
+                });
+                userArea.appendChild(loginBtn);
+            }
+        }
+
+        function updateCartCount() {
+            const currentCart = loadCart();
+            document.getElementById('cart-link').textContent = `Giỏ hàng (${currentCart.length})`;
+        }
+
+        function updateCartModal() {
+            const currentCart = loadCart();
+            const container = document.getElementById('cartItems');
+            if (currentCart.length === 0) {
+                container.innerHTML = '<p>Giỏ hàng trống.</p>';
+            } else {
+                let html = '<ul class="list-group">';
+                currentCart.forEach((item, index) => {
+                    html += `<li class="list-group-item d-flex justify-content-between align-items-center">
+                    ${item.name} - ${item.price}
+                    <button class="btn btn-sm btn-danger" onclick="removeFromCart(${index})">Xóa</button>
+                  </li>`;
+                });
+                html += '</ul>';
+                container.innerHTML = html;
+            }
+        }
+
+        function showCart() {
+            if (!isLoggedIn()) {
+                alert('Bạn cần đăng nhập để xem giỏ hàng.');
+                loginModal.show();
+                return;
+            }
+            updateCartModal();
+            cartModal.show();
+        }
+
+        function removeFromCart(index) {
+            let currentCart = loadCart();
+            currentCart.splice(index, 1);
+            saveCart(currentCart);
+            updateCartCount();
+            updateCartModal();
+        }
+
+        function checkout() {
+            if (!isLoggedIn()) {
+                alert('Bạn cần đăng nhập để thanh toán.');
+                loginModal.show();
+                return;
+            }
+            let currentCart = loadCart();
+            if (currentCart.length === 0) {
+                alert('Giỏ hàng trống!');
+                return;
+            }
+            let currentHistory = loadHistory();
+            currentHistory.push([...currentCart]);
+            saveHistory(currentHistory);
+
+            saveCart([]);
+            updateCartCount();
+            updateCartModal();
+            alert('Thanh toán thành công!');
+            cartModal.hide();
+        }
+
+        function showHistory() {
+            if (!isLoggedIn()) {
+                alert('Bạn cần đăng nhập để xem lịch sử mua hàng.');
+                loginModal.show();
+                return;
+            }
+            const currentHistory = loadHistory();
+            const container = document.getElementById('historyItems');
+            if (currentHistory.length === 0) {
+                container.innerHTML = '<p>Chưa có đơn hàng nào.</p>';
+            } else {
+                let html = '<ul class="list-group">';
+                currentHistory.forEach((order, idx) => {
+                    html += `<li class="list-group-item">Đơn hàng #${idx + 1}<ul>`;
+                    order.forEach(item => {
+                        html += `<li>${item.name} - ${item.price}</li>`;
+                    });
+                    html += '</ul></li>';
+                });
+                html += '</ul>';
+                container.innerHTML = html;
+            }
+            historyModal.show();
+        }
+
+        function addToCart(name, price) {
+            if (!isLoggedIn()) {
+                alert('Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.');
+                loginModal.show();
+                return;
+            }
+            let currentCart = loadCart();
+            currentCart.push({ name, price });
+            saveCart(currentCart);
+            updateCartCount();
+        }
+
+        function setupAddToCartButtons() {
+            const buttons = document.querySelectorAll('.add-to-cart-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const card = e.target.closest('.card');
+                    const name = card.querySelector('.card-title').textContent;
+                    const price = card.querySelector('.card-text').textContent;
+                    addToCart(name, price);
+                });
+            });
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('usernameInput').value.trim();
+            const password = document.getElementById('passwordInput').value;
+
+            if (username === DEMO_USER.username && password === DEMO_USER.password) {
+                localStorage.setItem('loggedInUser', username);
+                updateUserArea();
+                loginModal.hide();
+                alert('Đăng nhập thành công!');
+            } else {
+                document.getElementById('loginError').textContent = 'Tên đăng nhập hoặc mật khẩu không đúng.';
+            }
+        });
+
+        document.getElementById('cart-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            showCart();
+        });
+
+        document.getElementById('checkout-btn').addEventListener('click', checkout);
+
+        document.getElementById('history-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            showHistory();
+        });
+
+        window.onload = () => {
+            updateUserArea();
+            updateCartCount();
+            setupAddToCartButtons();
+        };
+
+        window.removeFromCart = removeFromCart;
+    </script>
+</body>
+
+</html>
